@@ -36,10 +36,10 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>GPT-3 Writer Assistant</h1>
+            <h1>Summarize news in just 2 sentences</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Write what you want :d</h2>
+            <h2>Write below your news text:</h2>
           </div>
         </div>
         {/* Add this code here*/}
@@ -50,18 +50,27 @@ const Home = () => {
             value={userInput}
             onChange={onUserChangedText}
           />
-          {/* New code I added here */}
+
           <div className="prompt-buttons">
-            <a className="generate-button" onClick={callGenerateEndpoint}>
+            <a
+              className={
+                isGenerating ? "generate-button loading" : "generate-button"
+              }
+              onClick={callGenerateEndpoint}
+            >
               <div className="generate">
-                <p>Generate</p>
+                {isGenerating ? (
+                  <span className="loader"></span>
+                ) : (
+                  <p>Summarize</p>
+                )}
               </div>
             </a>
           </div>
           <div className="output">
             <div className="output-header-container">
               <div className="output-header">
-                <h3>Output</h3>
+                <h3>Summary:</h3>
               </div>
             </div>
             <div className="output-content">
