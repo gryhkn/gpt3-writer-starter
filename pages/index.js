@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Image from "next/image";
+import TwitterLogo from "../assets/twitter.svg";
 
 const Home = () => {
   const [userInput, setUserInput] = useState("");
@@ -74,6 +76,14 @@ const Home = () => {
             </div>
             <div className="output-content">
               <p>{apiOutput}</p>
+            </div>
+          </div>
+          <div className="badge-container grow">
+            <div className="badge">
+              <Image src={TwitterLogo} alt="buildspace logo" />
+              <p>
+                <a href="https://twitter.com/gryhkn">Build by Giray</a>
+              </p>
             </div>
           </div>
         </div>
