@@ -29,16 +29,15 @@ const Home = () => {
     console.log(event.target.value);
     setUserInput(event.target.value);
   };
-
   return (
     <div className="root">
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Summarize any text in just two sentences.</h1>
+            <h1>Summarize news in just 2 sentences</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Write below your text:</h2>
+            <h2>Write below your news text:</h2>
           </div>
         </div>
         {/* Add this code here*/}
